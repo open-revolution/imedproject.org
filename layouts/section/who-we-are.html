@@ -1,0 +1,120 @@
+{{ partial "head.html" . }}
+
+<body class="home-template">
+
+  {{ partial "navbar.html" . }}
+
+  <section class="who-we-are">
+    <div class="content-wrapper">
+      <h1 class="page-title">{{ .Title }}</h1>
+
+      <!-- Rufus -->
+      <div class="event">
+        <div class="event-image">
+          <img src="{{ $.Site.BaseURL }}img/rufus.jpeg" class="img-circular-square">
+        </div>
+        <div class="event-content">
+          <h3>Rufus Pollock</h3>
+          <p>Rufus Pollock is an entrepreneur, researcher and technologist. He  is a Founder of Open Knowledge an award-winning international digital non-profit. He is an Ashoka Fellow, a Fellow of the RSA, as well as the Mead Fellow in Economics at Cambridge University.</p>
+        </div>
+      </div>
+
+      <!-- Fiona -->
+      <div class="event">
+        <div class="event-image">
+          <img src="{{ $.Site.BaseURL }}img/fiona.jpg" class="img-circular-square">
+        </div>
+        <div class="event-content">
+          <h3>Fiona Thompson</h3>
+          <p>Fiona Thompson specialises in strategy and organisational change. She studied Politics, Philosophy and Economics at Oxford University and has founded and led several for profit and social impact businesses.</p>
+        </div>
+      </div>
+
+      <!-- Sylvie -->
+      <div class="event">
+        <div class="event-image">
+          <img src="{{ $.Site.BaseURL }}img/sylvie.jpg" class="img-circular-square">
+        </div>
+        <div class="event-content">
+          <h3>Sylvie Barbier</h3>
+          <p>Sylvie Barbier is the co-founder of Art / Earth / Tech and a designer and lecturer. She has worked in digital communication, web development and art. She graduated from London College of Communication.</p>
+        </div>
+      </div>
+
+      <!-- Laurie -->
+      <div class="event">
+        <div class="event-image">
+          <img src="{{ $.Site.BaseURL }}img/laurie.jpg" class="img-circular-square">
+        </div>
+        <div class="event-content">
+          <h3>Laurie Parma</h3>
+          <p>Laurie Parma is the founder of LifeCloud, a wellbeing consulting and education company. As a Cambridge scholar of psychology, behavioural science and neuroscience, interdisciplinarity is the core of her approach to human flourishing.</p>
+        </div>
+      </div>
+
+ <!-- Ninon -->
+      <div class="event">
+        <div class="event-image">
+          <img src="{{ $.Site.BaseURL }}img/ninon.png" class="img-circular-square">
+        </div>
+        <div class="event-content">
+          <h3>Ninon Godefroy</h3>
+          <p>Ninon Godefroy is a co-founder of Art/Earth/Tech. She worked in renewable energy in Asia and Africa and studied public policy at the University of Oxford.</p>
+        </div>
+      </div>
+
+      <!-- Rose -->
+      <div class="event">
+        <div class="event-image">
+          <img src="{{ $.Site.BaseURL }}img/rose.jpg" class="img-circular-square">
+        </div>
+        <div class="event-content">
+          <h3>Rose Hadshar</h3>
+          <p>Rose Hadshar is a researcher and translator from French and German into English. A graduate from Balliol College Oxford and the University of York, Rose is interested in history, effective altruism and writing.</p>
+        </div>
+      </div>
+
+      <!-- Vik -->
+      <div class="event">
+        <div class="event-image">
+          <img src="{{ $.Site.BaseURL }}img/vik.jpg" class="img-circular-square">
+        </div>
+        <div class="event-content">
+          <h3>Viktoria Mahrberg</h3>
+          <p>Viktoria Mahrberg is a branding consultant and digital communications specialist, and works with numerous brands and start-ups in Italy and Sweden. She has a master’s degree in fashion brand management from Polimoda in Florence.</p>
+        </div>
+      </div>
+
+<h1 class="page-title"> Writing Fellow </h1>
+
+       <!-- Robert -->
+       <div class="event">
+         <div class="event-image">
+           <img src="{{ $.Site.BaseURL }}img/robert.jpg" class="img-circular-square">
+         </div>
+         <div class="event-content">
+           <h3>Robert Hart</h3>
+           <p>Robert Hart is an editorially independent researcher and writer specialising in public health, emerging technologies and human rights. He has a bachelor’s degree in natural sciences and a master’s degree in the history and philosophy of science, both from Downing College, Cambridge.</p>
+         </div>
+       </div>
+<h1 class="page-title"> Alumni </h1>
+
+      <!-- Brig -->
+      <div class="event">
+        <div class="event-image">
+          <img src="{{ $.Site.BaseURL }}img/brig.jpg" class="img-circular-square">
+        </div>
+        <div class="event-content">
+          <h3>Brigitte Arndt</h3>
+          <p>Brigitte Arndt is a branding and communications specialist, who has worked in the Fashion, Entertainment and Education Sectors. A Stellenbosch University and Polimoda graduate, passionate about philosophy, art, technology and life.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{ partial "footer.html" . }}
+
+  {{ partial "script.html" . }}
+</body>
+</html>

@@ -1,0 +1,26 @@
+baseurl: "/"
+title: "iMed - Innovating Medicines Entrepreneurship and Delivery"
+languageCode: "en-us"
+googleAnalytics: "UA-102022428-2"
+
+permalinks:
+  blog: /:year/:month/:day/:slug/
+
+params:
+  github: https://github.com/
+  twitter: https://twitter.com/
+  linkedin: https://www.linkedin.com/
+  facebook: https://www.facebook.com/
+  rosehadshar:
+    path: rose.jpg
+    fullname: Rose Hadshar
+  sylviebarbier:
+    path: sylvie.jpg
+    fullname: Sylvie Barbier  
+  roberthart:
+    path: robert.jpg
+    fullname: Robert Hart
+  laurieparma:
+    path: laurie.jpg
+    fullname: Laurie Parma
+  

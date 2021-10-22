@@ -1,0 +1,28 @@
+{{ partial "head.html" . }}
+
+<body class="home-template">
+
+  {{ partial "navbar.html" . }}
+
+  <section class="about">
+    <div class="content-wrapper">
+      <h1 class="page-title">{{ .Title }}</h1>
+      <a href="{{ $.Site.BaseURL }}data/imed-white-paper.pdf" onclick="ga('send', 'event', 'download', this.href); return true;" class="button"target="_blank"> White Paper <i class="fa fa-arrow-circle-o-down"></i>
+      </a>
+
+      <p>
+        <strong>Important Note:</strong> This is a draft version. This document is still currently in progress and will evolve in the coming months.
+      </p>
+      <br />
+      <h1>Table of Contents</h1>
+      {{ .TableOfContents }}
+      <br /><br />
+      {{ .Content }}
+    </div>
+  </section>
+
+  {{ partial "footer.html" . }}
+
+  {{ partial "script.html" . }}
+</body>
+</html>

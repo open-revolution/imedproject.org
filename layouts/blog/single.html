@@ -1,0 +1,37 @@
+{{ partial "head.html" . }}
+
+<body class="home-template">
+
+  {{ partial "navbar.html" . }}
+
+  <section class="about">
+    <div class="content-wrapper">
+      <div class="page-header">
+        <h1 class="page-title">{{ .Title }}</h1>
+        <p class="date">
+          <i class="icon ion-calendar" aria-hidden="true"></i> {{ .Date.Format "2 January 2006" }}
+            {{if gt (len .Params.authors) 1 }}
+            <br />
+            {{ end }}
+            {{ range $index,$item := .Params.authors }}
+              
+              {{ $author := index $.Site.Params $item}}
+              {{if $author.path}}
+              <img src="{{ $.Site.BaseURL }}img/{{$author.path}}" class="avatar" />
+              <span>{{ $author.fullname }}</span>
+              {{else}}
+              <img src="{{ $.Site.BaseURL }}img/default-avatar.png" class="avatar" />
+                <span>{{ $author.fullname }}</span>
+              {{end}}
+            {{end}}
+        </p>
+      </div>
+      <p>{{ .Content | markdownify }}</p>
+    </div>
+  </section>
+
+  {{ partial "footer.html" . }}
+
+  {{ partial "script.html" . }}
+</body>
+</html>

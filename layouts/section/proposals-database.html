@@ -1,0 +1,97 @@
+{{ partial "head.html" . }}
+
+<body class="home-template">
+
+  {{ partial "navbar.html" . }}
+
+  <section class="news">
+    <div class="content-wrapper" id="proposals">
+      <h1 class="page-title">{{ .Title }}</h1>
+      <div class="filter-input">
+        <p> This data base is a compilation of funding mechanisms similar to the remuneration right model made to date.</br> </br>
+        Each summary reviews and compares existing and potential proposals and their funding mechanisms for pharmaceutical research and development.</br> </br>
+        Proposals can be sorted according to their status, depending whether they have been <b>proposed</b> but are not active, currently <b>operational</b>, or have been either <b>completed</b> or <b>superseded</b>.
+        This database was originally created as accompanying material for our first report: <a href="{{ $.Site.BaseURL }}research/horizon-scan/"> the Horizon Scan Report</a>.
+        </p>
+        <input id="proposals-input" type="text"
+               onkeyup="dpFilterFunctionByTitle()" placeholder="Filter proposals by title"/>
+        <form name="myStatus" method="post" >
+          <select name='statuses'>
+            <option value="all">All</option>
+            <option value="operational">Operational</option>
+            <option value="proposed">Proposed</option>
+            <option value="superseded">Superseded</option>
+            <option value="completed">Completed</option>
+            <option value="rejected">Rejected</option>
+          </select>
+          <button type="button" title="Show" onclick="dpFilterFunctionByStatus(document.forms['myStatus'])">Show</button><br><br>
+          </form>
+      </div>
+      <ul>
+        <a href="{{ $.Site.BaseURL }}research/proposals-database-view" class="button" target="_blank">  Proposals database table <i class="ion-android-open" aria-hidden="true"></i></a>
+        <a href="{{ $.Site.BaseURL }}data/proposals_database.csv" class="button" target="_blank"> Proposals database (csv) <i class="fa fa-arrow-circle-o-down"></i></a>
+        <a href="{{ $.Site.BaseURL }}data/proposals_database.pdf" class="button" target="_blank"> Proposals database (pdf) <i class="fa fa-arrow-circle-o-down"></i></a>
+      </br></br>
+        {{ range .Data.Pages.ByTitle }}
+          <li style="margin-bottom:40px; clear:both">
+            <div>
+              <h2>{{ .Title }}</h2>
+              <div>
+                <p class="date status">
+                  <i class="icon ion-calendar"></i> {{ .Params.start_date }}
+                  <span><b>status:</b> {{.Params.status }}</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              {{.Params.description }}
+              {{ if .Summary }}
+                <a class= "readmore" href="{{ .Permalink }}" target="_blank" >Read more <span>&rsaquo;</span></a>
+              {{ end }}
+            </div>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+<script>
+
+function dpFilterFunctionByTitle() {
+  var proposals = document.getElementById("proposals")
+       .getElementsByTagName("li");
+  var input = document.getElementById('proposals-input');
+  var filter = input.value.toLowerCase();
+  for (var i=0; i < proposals.length; i++){
+    var proposal = proposals[i];
+    var a = proposal.getElementsByTagName("h2")[0].innerText.toLowerCase();
+    if (a.indexOf(filter) > -1){
+      proposal.style.display = "";
+    } else {
+      proposal.style.display = "none";
+    }
+  }
+}
+
+function dpFilterFunctionByStatus(myStatus) {
+  var selectedIndex = myStatus.elements["statuses"].selectedIndex;
+  var statusEntered = myStatus.elements["statuses"].options[selectedIndex].value.toLowerCase();
+  var proposals = document.getElementById("proposals")
+       .getElementsByTagName("li");
+  for (var i=0; i < proposals.length; i++){
+    var proposal = proposals[i];
+    var status = proposal.getElementsByTagName("span")[0].innerText.toLowerCase().split(':')[1].trim()
+    if (statusEntered === status || statusEntered === "all"){
+      proposal.style.display = "block";
+    } else {
+      proposal.style.display = "none";
+    }
+  }
+}
+
+</script>
+
+  {{ partial "footer.html" . }}
+
+  {{ partial "script.html" . }}
+</body>
+</html>

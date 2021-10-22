@@ -1,0 +1,44 @@
+{{ partial "head.html" . }}
+
+<body class="home-template">
+
+  {{ partial "navbar.html" . }}
+
+  <section class="research-special">
+    <div class="content-wrapper">
+        <h1 class="page-title">{{ .Title }}</h1>
+        <p>{{ .Content | markdownify }}</p>
+    </div>
+    <table>
+      <tbody>
+      {{ $url := "static/data/proposals_database.csv" }}
+      {{ $sep := "," }}
+      {{ range $i, $r := getCSV $sep $url }}
+        <tr>
+          <!-- TODO <td><a href="{{ $.Site.BaseURL }}/proposals-database/{{ replace (lower (index $r 0)) " " "-" }}">{{ index $r 0 }}</a></td> -->
+          <td>{{ index $r 0 }}</td>
+          <td>{{ index $r 1 }}</td>
+          <td>{{ index $r 2 }}</td>
+          <td>{{ index $r 3 }}</td>
+          <td>{{ index $r 4 }}</td>
+          <td>{{ index $r 5 }}</td>
+          <td>{{ index $r 6 }}</td>
+          <td>{{ index $r 7 }}</td>
+          <td>{{ index $r 8 }}</td>
+          <td>{{ index $r 9 }}</td>
+          <td>{{ index $r 11 }}</td>
+          <td>{{ index $r 12 }}</td>
+          <td>{{ index $r 13 }}</td>
+          <td>{{ index $r 14 }}</td>
+        </tr>
+      {{ end }}
+      </tbody>
+    </table>
+    
+  </section>
+
+  {{ partial "footer.html" . }}
+
+  {{ partial "script.html" . }}
+</body>
+</html>

@@ -1,0 +1,11 @@
+---
+title: How will people get better access to health?
+date: 2018-03-26
+weight: 23
+---
+
+Under remuneration rights, R&D will be remunerated separately from the sale of drugs which will lower prices. The model will also provide incentive to create and distribute drugs to maximise health impact. By moving away from expensive, poorly distributed and medicines skewed towards the needs of the richest markets remuneration rights model will increase access to medicines.
+
+Moving away from a patent system to a remuneration rights model will increase access to medicines. Under the patent system, the only source of income is through the sale of the final drug, meaning the price of this must reflect both the costs of manufacture, which are low, and R&D costs, which are high. Consequently, only those with sufficient resources can access the drugs produced, and there is a strong incentive to develop marketable, but not necessarily impactful, drugs. There are also few incentives for pharmaceutical companies to distribute their drugs widely beyond the affluent markets that can afford them.
+
+Under remuneration rights, there will be two payment streams: one for the R&D costs and one for the manufacture; which also means that R&D will be remunerated separately from the sale of drugs. The key of this model is that in exchange for a Remuneration Right for R&D, access to information has to be open so that price of manufacture can fall closer to competitive price. In fact, open information and lack of market exclusivity would encourage competition in manufacture, which would lower drug prices without threatening innovation. Moreover, remuneration rights are allocated in proportion to health impact rather than market profitability. A new incentive is then created to research medicines for conditions affecting the largest number of patients rather than those able to afford care. This would increase the number of medicines available, as well as lower the cost of each individual unit. Companies creating medicines in a remuneration rights based system would also have an incentive to distribute their medicines as widely as possible (provided that the medicine has a positive health impact for the recipients).
